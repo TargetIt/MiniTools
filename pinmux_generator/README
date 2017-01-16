@@ -1,0 +1,23 @@
+Initial version, No problem;
+
+# Need to do:
+#1
+assign io_GPIO1_OEN = SCAN_MODE ? 1'b1 		:  #defaul value in scan mode.
+					  BIST_MODE ? BIST1_OEN :
+					  (SEL = 3) ? FUNC3		:
+					  (SEL = 2) ? FUNC2 	:
+					  ...
+#2	 
+assign GPIO1_C 		=	SCAN_MODE			? 1'b0		 :
+						(sw_GPIO1_sel == 2)	? 1'b0 		 :
+						(sw_GPIO1_sel == 1)	? 1'b0 		 :
+						(sw_GPIO1_sel == 0)	? io_GPIO1_C :
+						io_GPIO1_C;
+#3
+
+Usage format:
+	PINMUX_SHELL -pad_lib pad_lib -mux_table infile -func_num 3 -test_num 6 -test_mode test_mode_bak
+
+I300 script:
+    PINMUX -pad_lib pad_lib -mux_table pin_list_150313 -func_num 4 -test_num 22 -test_mode test_mode_150313 
+

@@ -1,0 +1,27 @@
+#####Method 1:
+##
+##IN: 	C: 	 output;	1;	0
+##IE: 	IE;	 input;		1;	0
+##OUT:	I;	 input; 	1;	0
+##OE: 	OEN; input;		1;	1
+##SW: 	REN; input;		1;	1
+##SW: 	SR;	 input;		1;	0
+##SW: 	DS;	 input;		2;	1
+
+###Method 2:
+#1
+C: 	 output;	1;	0
+#2
+IE;	 input;		1;	0
+#3
+I;	 input; 	1;	0
+#4
+OEN; input;		1;	1
+#5
+REN; input;		1;	1
+SR;	 input;		1;	0
+DS;	 input;		2;	1
+
+
+
+
