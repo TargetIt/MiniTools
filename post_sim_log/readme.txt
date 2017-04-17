@@ -1,0 +1,1 @@
+Use the grep/sed/awk to deal with log
