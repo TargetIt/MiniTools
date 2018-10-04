@@ -12,7 +12,7 @@ outfile_content =  base64.b64decode(infile_content)
 
 outfile_name = 'dec' + infile_name
 
-outfile_handle = open(outfile_name, 'w')
+outfile_handle = open(outfile_name, 'wb')
 
 outfile_handle.write(outfile_content)
 
